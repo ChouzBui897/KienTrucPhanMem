@@ -1,22 +1,57 @@
-### AL ###
-#Template for AL projects for Dynamics 365 Business Central
-#launch.json folder
+## ASP.NET Core
+# Windows image file directories
+[Dd]ebug/
+[Dd]ebugPublic/
+[Dd]ist/
+obj/
+bin/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer files
+*.vspscc
+.vsconfig
+
+# User-specific files
 .vscode/
-#Cache folder
-.alcache/
-#Symbols folder
-.alpackages/
-#Snapshots folder
-.snapshots/
-#Testing Output folder
-.output/
-#Extension App-file
-*.app
-#Rapid Application Development File
-rad.json
-#Translation Base-file
-*.g.xlf
-#License-file
-*.flf
-#Test results file
-TestResults.xml
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# JetBrains Rider
+.idea/
+
+# VS Code directories
+.vscode/
+
+# npm packages
+node_modules/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+
+# ASP.NET temp folders
+.vs/
+.vs2019/
+
+# Tye directories
+.tye/
+
+# NPM logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Webpack
+dist/
