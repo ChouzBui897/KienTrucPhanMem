@@ -19,9 +19,9 @@ namespace ASC.Web.Controllers
             _settings = settings;
         }
 
-        public IActionResult Index([FromServices] IOptions<ApplicationSettings> a)
+        public IActionResult Index()
         {
-            //ViewBag.Title = _settings.Value.ApplicationTitle;
+            ViewBag.Title = _settings.Value.ApplicationTitle;
             return View();
         }
 
