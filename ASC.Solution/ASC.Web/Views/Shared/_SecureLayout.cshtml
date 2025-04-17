@@ -87,9 +87,8 @@
         </div>
     </div>
 </footer>
-@section Scripts {
-    @RenderSection("Scripts", required: false)
-
+@section Scripts { 
+   
     <script type="text/javascript">
         $(function () {
             $('#ancrLogout').click(function () {
@@ -106,4 +105,6 @@
             $('.collapsible').collapsible();
         });
     </script>
+    @RenderSection("Scripts", required: false)
+   
 }
