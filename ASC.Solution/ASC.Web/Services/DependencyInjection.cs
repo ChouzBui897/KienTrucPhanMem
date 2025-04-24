@@ -67,6 +67,11 @@ namespace ASC.Web.Services
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddControllersWithViews();
 
+            services.AddControllersWithViews().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.PropertyNamingPolicy = null;
+            });
+
             return services;
         }
 

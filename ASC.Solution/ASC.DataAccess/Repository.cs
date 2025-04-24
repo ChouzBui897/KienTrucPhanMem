@@ -50,7 +50,7 @@ namespace ASC.DataAccess
 
         public async Task<IEnumerable<T>> FindAllByPartitionKeyAsync(string partitionKey)
         {
-            var result = dbContext.Set<T>().Where(t => t.PartitionKey == partitionKey).ToListAsync().Result;
+            var result = dbContext.Set<T>().Where(t => t.PartitionKey.Contains(partitionKey)).ToListAsync().Result;
             return result as IEnumerable<T>;
         }
 

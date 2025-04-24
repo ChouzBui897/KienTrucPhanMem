@@ -46,6 +46,7 @@ namespace ASC.Business
         {
             try
             {
+                key = key ?? "";
                 var masterValues = await _unitOfWork.Repository<MasterDataValue>().FindAllByPartitionKeyAsync(key);
                 return masterValues.ToList();
             }
@@ -137,9 +138,9 @@ namespace ASC.Business
                         masterValue.Name = value.Name; 
                         _unitOfWork.Repository<MasterDataValue>().Update(masterValue);
                     }
+                    _unitOfWork.CommitTransaction();
                 } 
 
-                _unitOfWork.CommitTransaction(); 
                 return true;
             } 
         }
