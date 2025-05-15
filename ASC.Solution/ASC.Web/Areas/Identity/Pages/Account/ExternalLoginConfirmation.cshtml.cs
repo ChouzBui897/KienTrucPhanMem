@@ -1,4 +1,4 @@
-using ASC.Model;
+using ASC.Model.BaseTypes;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;

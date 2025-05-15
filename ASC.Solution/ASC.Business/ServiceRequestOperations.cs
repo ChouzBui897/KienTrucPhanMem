@@ -1,6 +1,7 @@
 ﻿using ASC.Business.Interfaces;
 using ASC.DataAccess.Interfaces;
 using ASC.Model.Models;
+using ASC.Model.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,6 +51,13 @@ namespace ASC.Business
                 _unitOfWork.CommitTransaction();
                 return serviceRequest;
             }
+        }
+        public async Task<List<ServiceRequest>> GetServiceRequestsByRequestedDateAndStatus
+         (DateTime? requestedDate, List<string> status = null, string email = "", string serviceEngineerEmail = "")
+        {
+            var query = Queries.GetDashboardQuery(requestedDate, status, email, serviceEngineerEmail);
+            var serviceRequests = await _unitOfWork.Repository<ServiceRequest>().FindAllByQuery(query);
+            return serviceRequests.ToList();
         }
     }
 }

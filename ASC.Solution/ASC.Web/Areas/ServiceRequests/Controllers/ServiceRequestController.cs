@@ -1,6 +1,6 @@
 ﻿using ASC.Business.Interfaces;
 using ASC.Model.Models;
-using ASC.Model;
+using ASC.Model.BaseTypes;
 using ASC.Web.Areas.ServiceRequests.Models;
 using ASC.Web.Controllers;
 using ASC.Web.Data;

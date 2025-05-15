@@ -17,7 +17,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using ASC.Web.Services;
-using ASC.Model;
+using ASC.Model.BaseTypes;
 namespace ASC.Web.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]

@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -58,6 +59,16 @@ namespace ASC.DataAccess
         {
             var result = dbContext.Set<T>().ToListAsync().Result;
             return result as IEnumerable<T>;
+        }
+        public async Task<IEnumerable<T>> FindAllByQuery(Expression<Func<T, bool>> filter)
+        {
+            var result = dbContext.Set<T>().Where(filter).ToListAsync().Result;
+            return result as IEnumerable<T>;
+        }
+
+        public Task<IEnumerable<T>> FindAllInAuditByQuery(Expression<Func<T, bool>> filter)
+        {
+            throw new NotImplementedException();
         }
     }
 
